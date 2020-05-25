@@ -6,14 +6,14 @@
     <id>d4t-addons-keysncorpses</id>
     <!-- https://chocolatey.org/docs/create-packages#package-fix-version-notation -->
     <version>04.12.2019</version>
-    <!-- <packageSourceUrl>Where is this Chocolatey package located (think GitHub)? packageSourceUrl is highly recommended for the community feed</packageSourceUrl>-->
+    <packageSourceUrl>https://github.com/n3rd4i/d4t-addons-keysncorpses</packageSourceUrl>
     <!-- owners is a poor name for maintainers of the package. It sticks around by this name for compatibility reasons. It basically means you. -->
     <owners>n3rd4i</owners>
     <!-- ============================== -->
 
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <!-- This section is about the software itself -->
-    <title>d4t-addons-keysncorpses (Install)</title>
+    <title>D4T: Keys&#39;n Corpses</title>
     <authors>VICE, Project Brutality devs, JD-513, Shockwave_S08, Michaelis</authors>
     <!-- projectUrl is required for the community feed -->
     <projectUrl>https://www.moddb.com/mods/death-foretold/addons/d4t-keysncorpses</projectUrl>
