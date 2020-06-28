@@ -1,5 +1,6 @@
 ﻿$ErrorActionPreference = 'Stop';
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+. "$toolsDir\commonEnv.ps1"
 
 $unzipLocation = "$(Join-Path $toolsDir keysncorpses)"
 $url = Get-ModdbDlUrl 'https://www.moddb.com/addons/start/186106'
@@ -11,3 +12,10 @@ $packageArgs = @{
   checksumType  = 'sha256'
 }
 Install-ChocolateyZipPackage @packageArgs
+
+# Cleanup link first (safely)
+& $ENV:COMSPEC /C IF EXIST $pk3_lnk DEL /S /Q $pk3_lnk
+
+# Install symbolic link for later use
+$pk3_src = "$(Join-Path $unzipLocation $pk3)"
+& $ENV:COMSPEC /C MKLINK $pk3_lnk $pk3_src
