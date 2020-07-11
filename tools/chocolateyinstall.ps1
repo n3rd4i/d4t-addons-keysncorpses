@@ -13,7 +13,7 @@ $packageArgs = @{
 }
 Install-ChocolateyZipPackage @packageArgs
 
-# Cleanup link first (safely)
+# Cleanup link first (safely) check: https://superuser.com/a/306618
 & $ENV:COMSPEC /C IF EXIST $pk3_lnk DEL /S /Q $pk3_lnk
 
 # Install symbolic link for later use
